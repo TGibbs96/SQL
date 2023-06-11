@@ -1,0 +1,26 @@
+--create a sporting goods store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, popularity INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "Football", 27, 7, 17);
+INSERT INTO store VALUES (2, "Basketball", 13, 8, 14);
+INSERT INTO store VALUES (3, "Baseball", 82, 5, 3);
+INSERT INTO store VALUES (4, "Bat", 30, 7, 25);
+INSERT INTO store VALUES (5, "frisbee", 21, 4, 7);
+INSERT INTO store VALUES (6, "bird", 98, 2, 2);
+INSERT INTO store VALUES (7, "racket", 26, 4, 30);
+INSERT INTO store VALUES (8, "volleyball", 16, 5, 12);
+INSERT INTO store VALUES (9, "hockey stick", 8, 6, 25);
+INSERT INTO store VALUES (10, "puck", 200, 6, 3);
+INSERT INTO store VALUES (11, "shotgun", 4, 8, 450);
+INSERT INTO store VALUES (12, "clay pigeon", 700, 7, 1);
+INSERT INTO store VALUES (13, "pole", 38, 8, 42);
+INSERT INTO store VALUES (14, "hooks", 58, 9, 1);
+INSERT INTO store VALUES (15, "live bait", 20, 10, 12);
+
+--displays items with prices that are greater than or equal to 10 and in order of price
+SELECT * FROM store WHERE price >= 10
+ORDER BY price;
+
+--displays the sum of the items in the store 
+Select SUM(quantity) FROM store;
