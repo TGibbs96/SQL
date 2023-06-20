@@ -1,0 +1,35 @@
+here */
+CREATE TABLE celebrities (id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT);
+    
+INSERT INTO celebrities (first_name, last_name) VALUES ("Snoop", "Dogg");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Tupac", "Shakur");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Marshal", "Mathers III");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Kanye", "West");
+ 
+INSERT INTO celebrities (first_name, last_name) VALUES ("Nathan", "Feuerstein");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Colson", "Baker");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Curtis", "Jackson III");
+
+INSERT INTO celebrities (first_name, last_name) VALUES ("Taylor", "Swift");
+
+CREATE TABLE hobbies (id INTEGER PRIMARY KEY, celebrities_id INTEGER, hobby TEXT);
+
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (1, "smoking");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (2, "traveling");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (3, "writing");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (4, "fashion");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (5, "music");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (6, "listening to nickelback");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (7, "boxing");
+INSERT INTO hobbies (celebrities_id, hobby) VALUES (8, "baking");
+
+SELECT c.first_name, c.last_name, h.hobby FROM celebrities c
+JOIN hobbies h
+ON c.id = h.celebrities_id;
